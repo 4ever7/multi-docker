@@ -20,7 +20,7 @@ after_success:
 # Push built containers to docker hub
 #
 # Log in the docker CLI
-- echo "$DOCKER_PASSWD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWD" | docker login -u "$DOCKER_ID" --password-stdin
 
 # Take the images and push up to docker hub
   - docker push 4ever7/multi-client
