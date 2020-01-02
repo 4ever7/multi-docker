@@ -7,7 +7,7 @@ before_install:
   - docker build -t 4ever7/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run 4ever7/react-test npm test --coverage
+  - docker run 4ever7/react-test npm test -- --coverage
 
 # after success will go through each of the sub-folders and build
 # the containers specified by the default "Dockerfile"
